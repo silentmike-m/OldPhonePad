@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilentMike.OldPhonePad.Application.Tests.Unit", "SilentMike.OldPhonePad.Application.Tests.Unit\SilentMike.OldPhonePad.Application.Tests.Unit.csproj", "{025D78F2-55AD-4D77-8B41-D64508D3F688}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilentMike.OldPhonePad.Application", "..\src\SilentMike.OldPhonePad.Application\SilentMike.OldPhonePad.Application.csproj", "{E1D22D7B-85EC-4B39-9F34-096ABF1DAC12}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{025D78F2-55AD-4D77-8B41-D64508D3F688}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{025D78F2-55AD-4D77-8B41-D64508D3F688}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{025D78F2-55AD-4D77-8B41-D64508D3F688}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{025D78F2-55AD-4D77-8B41-D64508D3F688}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1D22D7B-85EC-4B39-9F34-096ABF1DAC12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1D22D7B-85EC-4B39-9F34-096ABF1DAC12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1D22D7B-85EC-4B39-9F34-096ABF1DAC12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1D22D7B-85EC-4B39-9F34-096ABF1DAC12}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
