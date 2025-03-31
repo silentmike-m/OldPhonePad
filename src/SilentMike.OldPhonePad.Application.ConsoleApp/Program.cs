@@ -1,8 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using Serilog;
 using SilentMike.OldPhonePad.Application;
-using SilentMike.OldPhonePad.Application.Commons.Interfaces;
 
 const int EXIT_FAILURE = 1;
 const int EXIT_SUCCESS = 0;
@@ -20,16 +18,7 @@ try
 {
     Log.Information("Hello to Phone Pad converter!");
 
-    var serviceProvider = new ServiceCollection()
-        .AddApplication()
-        .BuildServiceProvider();
-
-    // create old phone pad converting service
-    // in future consider keyed DI
-    var oldPhonePadService = serviceProvider.GetRequiredService<IPhonePadService>();
-    var oldPhonePadKeyMapStrategy = serviceProvider.GetRequiredService<IKeyMapStrategy>();
-
-    Process(oldPhonePadService, oldPhonePadKeyMapStrategy);
+    Process();
 
     return EXIT_SUCCESS;
 }
@@ -44,7 +33,7 @@ finally
     Log.CloseAndFlush();
 }
 
-static void Process(IPhonePadService service, IKeyMapStrategy keyMapStrategy)
+static void Process()
 {
     while (true)
     {
@@ -58,7 +47,7 @@ static void Process(IPhonePadService service, IKeyMapStrategy keyMapStrategy)
 
         try
         {
-            var result = service.Convert(input, keyMapStrategy, false);
+            var result = OldPhonePadService.OldPhonePad(input);
             Console.WriteLine($"Result: {result}");
         }
         catch (Exception exception)

@@ -15,8 +15,6 @@ service.Convert("8 88777444666*664#") // "TURING"
 ```
 
 ## Project Structure
-This application was built using [Clean Architecture](https://jasontaylor.dev/clean-architecture-getting-started/).
-
-- `src/SilentMike.OldPhonePad.Application`: Application class library. Contains core service prepared for DI
+- `src/SilentMike.OldPhonePad.Application`: Application class library. Contains core service 
 - `src/SilentMike.OldPhonePad.Application.ConsoleApp`: Console application demo
 - `tests/SilentMike.OldPhonePad.Application.Tests.Unit`: Unit tests

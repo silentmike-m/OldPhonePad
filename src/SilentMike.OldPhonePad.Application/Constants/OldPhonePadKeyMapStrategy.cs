@@ -1,8 +1,9 @@
-namespace SilentMike.OldPhonePad.Application.Commons.Strategies;
+namespace SilentMike.OldPhonePad.Application.Constants;
 
-using SilentMike.OldPhonePad.Application.Commons.Interfaces;
-
-internal sealed class OldPhonePadKeyMapStrategy : IKeyMapStrategy
+/// <summary>
+///     Defines old phone pad keys mapping
+/// </summary>
+internal static class OldPhonePadKeyMapStrategy
 {
     private static readonly Dictionary<char, char[]> MAP = new()
     {
@@ -78,7 +79,7 @@ internal sealed class OldPhonePadKeyMapStrategy : IKeyMapStrategy
         },
     };
 
-    public char? GetCharacter(char key, int presses)
+    public static char? GetCharacter(char key, int presses)
     {
         if (MAP.TryGetValue(key, out var chars) is false)
         {
@@ -90,7 +91,7 @@ internal sealed class OldPhonePadKeyMapStrategy : IKeyMapStrategy
         return chars[index];
     }
 
-    public int? GetMaxCharacterCount(char key)
+    public static int? GetMaxCharacterCount(char key)
         => MAP.TryGetValue(key, out var chars)
             ? chars.Length
             : null;
